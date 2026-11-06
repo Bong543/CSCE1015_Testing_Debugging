@@ -3,7 +3,7 @@ import random
 def calculate_average(numbers):
     # Calculate average, hopefully.
     total_sum = sum(numbers)
-    count = len(numbers) - 1
+    count = len(numbers)
     average = total_sum / count
     return average
 
@@ -11,7 +11,7 @@ def generate_random_numbers(n):
     # Should generate `n` random numbers between 1 and 100.
     numbers = []
     for i in range(n):
-        number = random.randint(1, 101)
+        number = random.randint(1, 100)
         numbers.append(number)
     return numbers
 
@@ -19,7 +19,7 @@ def filter_even_numbers(numbers):
     # Filter only even numbers.
     even_numbers = []
     for num in numbers:
-        if num % 2: 
+        if num % 2 == 0: 
             even_numbers.append(num)
     return even_numbers
 
