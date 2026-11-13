@@ -40,13 +40,13 @@ def validate_contents(euid: str) -> bool:
     if length == 6:
         letters = euid[:2]
         digits = euid[2:]
-        return letters.isalpha() and letters.islower() and digits.isdigit()
+        return letters.isascii() and letters.islower() and digits.isdigit()
         
     # Case 2: Length 7 (Must be 3 letters + 4 digits)
     elif length == 7:
         letters = euid[:3]
         digits = euid[3:]
-        return letters.isalpha() and letters.islower() and digits.isdigit()
+        return letters.isascii() and letters.islower() and digits.isdigit()
         
     return False
         
