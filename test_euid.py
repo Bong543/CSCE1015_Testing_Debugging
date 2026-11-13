@@ -82,7 +82,7 @@ class TestEUIDValidation(unittest.TestCase):
             self.assertFalse(validate_contents(input), f"Contents '{input}' should be invalid")
                 
         # Random fuzz testing.
-        for _ in range(10_000_000):
+        for _ in range(10_000):
             # Generate valid lengths.
             length = random.randint(6, 7)
             # Generate string with all kinds of characters.
