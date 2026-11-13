@@ -13,9 +13,9 @@ def validate_length(euid: str) -> bool:
     """
         
     if len(euid) == 6 or len(euid) == 7:
-        return true
+        return True
     else:
-        return false
+        return False
     
 
 def validate_contents(euid: str) -> bool:
