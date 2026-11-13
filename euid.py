@@ -42,7 +42,7 @@ def validate_contents(euid: str) -> bool:
     digits = euid[-4:]
     
     
-    if 2 <= len(prefix) <= 3 and prefix.islower() and prefix.isalpha() and digits.isdigit()
+    if 2 <= len(prefix) <= 3 and prefix.islower() and prefix.isalpha() and digits.isdigit():
         return True
     else:
         return False
