@@ -11,11 +11,7 @@ def validate_length(euid: str) -> bool:
     Rules:
     - Must be exactly 6 or 7 characters long.
     """
-        
-    if len(euid) == 6 or len(euid) == 7:
-        return True
-    else:
-        return False
+    return len(euid) in (6, 7)
     
 
 def validate_contents(euid: str) -> bool:
