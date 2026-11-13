@@ -11,6 +11,8 @@ def validate_length(euid: str) -> bool:
     Rules:
     - Must be exactly 6 or 7 characters long.
     """
+    if not isinstance(euid, str):
+        return False
     return len(euid) in (6, 7)
     
 
