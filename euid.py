@@ -36,16 +36,18 @@ def validate_contents(euid: str) -> bool:
     if not isinstance(euid, str):
         return False
         
-    
-    
-    prefix = euid[:-4]
-    digits = euid[-4:]
-    
-    
-    if 2 <= len(prefix) <= 3 and prefix.islower() and prefix.isalpha() and digits.isdigit():
-        return True
+    length = len(euid)
+    if length == 6:
+        letters = euid[:2]
+        digits = euid[2:]
+    elif length == 7:
+        letters = euid[:3]
+        digits = euid[3:]
     else:
         return False
+        
+    
+    return letters.islower() and letters.isalpha() and digits.isdigit(
 
 
 def validate(euid: str) -> bool:
