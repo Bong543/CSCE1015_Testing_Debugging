@@ -47,7 +47,7 @@ def validate_contents(euid: str) -> bool:
         return False
         
     
-    return letters.islower() and letters.isalpha() and digits.isdigit(
+    return letters.islower() and letters.isalpha() and digits.isdigit()
 
 
 def validate(euid: str) -> bool:
